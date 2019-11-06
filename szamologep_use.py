@@ -14,8 +14,8 @@ assert header_text == "Szamologep"
 
 driver.find_element(By.XPATH, "//input[3]").click()
 
-result = driver.find_element (By.ID, "result-input").click()
+result = driver.find_element (By.ID, "result-input").get_attribute("value")
 
-drive.save_screenshot ("result.png")
+driver.save_screenshot("result.png")
 
 assert result == "55"
